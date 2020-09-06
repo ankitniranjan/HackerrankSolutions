@@ -18,7 +18,7 @@ def arrayManipulation(n, queries):
             arr[query[1]] -= query[2]
     
     for i in range(len(arr)):
-        current_int_value  += arr[i]
+        current_value  += arr[i]
         if maximum_value < current_value :
             maximum_value = current_value 
 
