@@ -25,7 +25,7 @@ def minimumBribes(q):
 def minimumBribes(q):
     n = 0
     for i in range(len(q)):
-        if q[i] - 1 - i >= 3:
+        if q[i] - (i + 1) >= 3:
             print("Too chaotic")
             return
     ongoing = True
