@@ -1,7 +1,7 @@
 #    Your task is to write a regular expression that matches only and exactly strings of form: abc.def.ghi.jkx, where each variable a,b,c,d,e,f,g,h,i,j,k,x can be  
 #    any single character except the newline.
 
-regex_pattern = r"a\..d\..g\..j\.."	    # Do not delete 'r'.
+regex_pattern = r"^.{3}\..{3}\..{3}\..{3}$"	    # Do not delete 'r'.
 
 import re
 import sys
