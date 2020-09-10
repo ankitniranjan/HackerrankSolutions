@@ -1,13 +1,11 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 import re
 
-language = '''C:CPP:JAVA:PYTHON:PERL:PHP:RUBY:CSHARP:HASKELL:
-CLOJURE:BASH:SCALA:ERLANG:CLISP:LUA:BRAINFUCK:JAVASCRIPT:GO:D:
-OCAML:R:PASCAL:SBCL:DART:GROOVY:OBJECTIVEC'''
+lang = 'C:CPP:JAVA:PYTHON:PERL:PHP:RUBY:CSHARP:HASKELL:CLOJURE:BASH:SCALA:ERLANG:CLISP:LUA:BRAINFUCK:JAVASCRIPT:GO:D:OCAML:R:PASCAL:SBCL:DART:GROOVY:OBJECTIVEC'
 
-language = language.replace(':', '|')  					#string manipulation
+lang = lang.replace(':', '|')  					#string manipulation
 
-regex = r'^[1-9]\d{4}\s' + '(' + language + ')$'		#regex_expression
+regex = r'^[1-9]\d{4}\s' + '(' + lang + ')$'		#regex_expression
 
 pattern = re.compile(regex)								#compilation
 
@@ -27,7 +25,7 @@ for _ in range(N):
 #	 ^[0-9]{4}                # For numberic value between 10000-100000 in the beginning(^)
 #	 \s						  # For single Whitespace
 #	 '('
-#		+ language+			  # For languages
+#		+ lang+			  # For languages
 #	 ')'
 #	 $                 		  # For ending
 #	""", re.VERBOSE)
