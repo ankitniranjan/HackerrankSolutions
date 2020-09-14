@@ -1,8 +1,10 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 import re, sys
-print(';'.join(sorted(set(re.findall('<(\w+)', sys.stdin.read())))))
+print(';'.join(sorted(set(  re.findall( '<(\w+)', sys.stdin.read() )   ))))
 
-
+=> findall(a,b)
+a=regex exp
+b=string
 
 
 => We need to compile the regex exp only when we are using raw expression => r"____"
