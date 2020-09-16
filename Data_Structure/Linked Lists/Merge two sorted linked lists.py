@@ -50,22 +50,20 @@ def mergeLists(nodeA, nodeB):
     mergedHead = SinglyLinkedList() # dummy node so can be handled the same
     merged = mergedHead
 
-    while nodeA != None or nodeB != None:
-        if nodeA == None:
-            merged.next = nodeB
-            break
-        elif nodeB == None:
+    while nodeA != None and nodeB != None:
+        if nodeA.data < nodeB.data:
             merged.next = nodeA
-            break
+            nodeA = nodeA.next
         else:
-            if nodeA.data < nodeB.data:
-                merged.next = nodeA
-                nodeA = nodeA.next
-            else:
-                merged.next = nodeB
-                nodeB = nodeB.next
+            merged.next = nodeB
+            nodeB = nodeB.next
         merged = merged.next
 
+    if nodeA == None:
+        merged.next = nodeB
+    elif nodeB == None:
+        merged.next = nodeA
+    
     return mergedHead.next
 
 if __name__ == '__main__':
