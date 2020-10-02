@@ -53,3 +53,10 @@ function performOperation(secondInteger, secondDecimal, secondString) {
     console.log(firstString + secondString)
 }
 
+function main() {
+    const secondInteger = readLine();
+    const secondDecimal = readLine();
+    const secondString = readLine();
+    
+    performOperation(secondInteger, secondDecimal, secondString);
+}
